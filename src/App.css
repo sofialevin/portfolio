@@ -62,4 +62,27 @@ a:hover {
   color: #1890ff;
 }
 
+nav {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  border: 2px solid red;
+  width: 100%;
+  padding: 20px;
+}
+
+section {
+  min-height: 100vh;
+  border: 2px solid red;
+  width: 100%;
+}
+
+.about-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
