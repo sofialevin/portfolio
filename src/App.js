@@ -4,6 +4,7 @@ import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-ic
 import './App.css';
 
 import Nav from './Nav';
+import About from './About';
 
 function App() {
   const scrollToContact = createRef();
@@ -14,7 +15,7 @@ function App() {
     <div className="App">
       <Nav scrollToContact={scrollToContact} scrollToProjects={scrollToProjects} scrollToAbout={scrollToAbout}/>
       <section ref={scrollToAbout} className="about-section">
-        <h1 className="content">Coming soon...</h1>
+        <About />
       </section>
       <section ref={scrollToProjects} className="projects-section"></section>
       <section ref={scrollToContact} className="contact-section"></section>
