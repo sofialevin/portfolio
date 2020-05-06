@@ -1,14 +1,24 @@
-import React from 'react';
+import React, {createRef} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import './App.css';
 
+import Nav from './Nav';
+import About from './About';
+
 function App() {
+  const scrollToContact = createRef();
+  const scrollToProjects = createRef();
+  const scrollToAbout = createRef();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <h1 className="content">Coming soon...</h1>
-      </header>
+      <Nav scrollToContact={scrollToContact} scrollToProjects={scrollToProjects} scrollToAbout={scrollToAbout}/>
+      <section ref={scrollToAbout} className="about-section">
+        <About />
+      </section>
+      <section ref={scrollToProjects} className="projects-section"></section>
+      <section ref={scrollToContact} className="contact-section"></section>
       <footer className="links">
         <a href="https://github.com/sofialevin">
           <FontAwesomeIcon icon={faGithub} />

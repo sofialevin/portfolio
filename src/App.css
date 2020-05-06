@@ -1,13 +1,18 @@
 .App {
   text-align: center;
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+	height: 100%;
+  min-height: 100vh;
+}
+
+#root {
+  height: 100%;
 }
 
 .App-logo {
@@ -38,28 +43,50 @@
   }
 }
 
-.links {
-  display: flex;
-  flex-direction: row;
-  height: 50px;
-  margin-top: -50px;
-}
-
-.links > a {
-  margin: 20px;
-}
-
-.content {
-  padding: 20px;
-  padding-bottom: 50px;
-}
-
 a {
   color: white;
 }
 
 a:hover {
   color: #1890ff;
+}
+
+nav {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  border: 2px solid red;
+  width: 100%;
+  padding: 20px;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+nav > ul > li > a {
+  cursor: pointer;
+}
+
+nav > ul > li {
+  margin: 0 20px;
+}
+
+section {
+  min-height: 100vh;
+  border: 2px solid red;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.about-section {
+  padding-top: 103.25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
