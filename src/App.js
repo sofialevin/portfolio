@@ -16,8 +16,9 @@ function App() {
       <Nav scrollToContact={scrollToContact} scrollToProjects={scrollToProjects} scrollToAbout={scrollToAbout}/>
       <section ref={scrollToAbout} className="about-section">
         <About />
+        <a href="#projects-section"><span></span></a>
       </section>
-      <section ref={scrollToProjects} className="projects-section"></section>
+      <section ref={scrollToProjects} className="projects-section" id="projects-section"></section>
       <section ref={scrollToContact} className="contact-section"></section>
       <footer className="links">
         <a href="https://github.com/sofialevin">
