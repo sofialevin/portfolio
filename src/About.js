@@ -4,10 +4,17 @@ import Sofia from './IMG_0399.JPG';
 const About = () => {
   return (
     <>
-        <img src={Sofia} alt="Sofia's Profile Picture" />
+      <h3>About Me</h3>
         <div className="about-content">
-          <h2>Hi, I'm Sofia and I'm a<br />Full Stack Web Developer</h2>
-          <h2>living in Oakland, CA</h2>
+          <div className="about-text">
+            <p>Hi! I'm Sofia, I'm a web developer living in Oakland, CA.</p>
+            <p>I love creating things but I'm particularly passionate about building accessible, responsive UIs.</p>
+            <p>I'm originally from Portugal but I moved to the Bay Area in 2013. Since then I have worked at <a href="www.zendesk.com">Zendesk</a>, <a href="www.postmates.com">Postmates</a> and <a href="www.onemedical.com">One Medical</a>.</p>
+            <p>When I'm not coding, I still mostly try to build and make things. My current favorites are knitting and baking but give me and idea and some tools and I will try to make something awesome!</p>
+          </div>
+          <div className="about-image">
+            <img src={Sofia} alt="Sofia's Profile Picture" />
+          </div>
         </div>
     </>
   );
