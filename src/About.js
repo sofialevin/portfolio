@@ -5,8 +5,9 @@ const About = () => {
   return (
     <>
         <img src={Sofia} alt="Sofia's Profile Picture" />
-        <div className="about-content">
-          <h2>Hi, I'm Sofia and I'm a<br />Full Stack Web Developer</h2>
+        <div className="about-content css-typing">
+          <h2>Hi, I'm Sofia</h2>
+          <h2>I'm a Full Stack Web Developer</h2>
           <h2>living in Oakland, CA</h2>
         </div>
     </>
