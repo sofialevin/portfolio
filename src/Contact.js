@@ -7,7 +7,8 @@ const Contact = () => {
   <h3>Contact</h3>
   <h4>Get In Touch!</h4>
   <p>Want to work together or just find out about what I'm up to? Leave me a message and I'll get back to you soon!</p>
-  <form name="contact" method="POST" data-netlify="true">
+  <form name="contact" method="POST">
+    <input type="hidden" name="form-name" value="contact" />
     <input type="text" placeholder="Name" name="name" />  
     <input type="email" placeholder="Email" name="email" />
     <textarea name="message" placeholder="Message"></textarea>
