@@ -1,0 +1,30 @@
+header {
+  width: 100%;
+  margin: 0 30px;
+}
+
+nav {
+  height: 100px;
+  overflow: hidden;
+  background-color: $background;
+  position: fixed;
+  top: 0;
+  border: 2px solid red;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 2rem;
+  ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  li {
+    margin: 0 20px;
+    a {
+      cursor: pointer;
+      }
+    }
+  }   
+}
