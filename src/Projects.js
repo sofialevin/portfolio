@@ -29,6 +29,14 @@ const Projects = () => {
       "postgresql"],
       img: "https://p198.p4.n0.cdn.getcloudapp.com/items/Z4uLp5l4/Screen%20Recording%202020-05-12%20at%2008.01%20PM.gif?v=9df0f357e6a721b4fa1e252c3eda02de"
     },
+    {
+      name: "Stripe Refund App for Zendesk",
+      in_progress: false,
+      internal: true,
+      description: ["Zendesk sidebar app to allow the One Medical support team to issue membership refunds without leaving the support ticket.", "Build during the One Medical hack week as an initiative to improve the workflow of the support team."],
+      tech: ["react", "bootstrap", "stripeAPI"],
+      img: "https://p198.p4.n0.cdn.getcloudapp.com/items/geuWBW4g/ezgif.com-video-to-gif%20(1).gif?v=01c63115e04adca1cf6cc88b55d3045c"
+    },
   ]
 
 
