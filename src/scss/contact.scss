@@ -1,0 +1,84 @@
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  h3 {
+      margin: 40px 0px 40px;
+      display: flex;
+      align-items: center;
+      &:before {
+        content: "#";
+        color: $highlight;
+        margin-right: 10px;
+      }
+      &:after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 870px;
+        background-color: rgb(48, 60, 85);
+        position: relative;
+        margin-left: 20px;
+      }
+    }
+    h4 {
+      margin-bottom: 40px;
+    }
+    p {
+      max-width: 700px;
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      align-items: center;
+      margin-top: 20px;
+      button {
+        padding: 10px 15px;
+        font-size: 1.8rem;
+        display: inline-block;
+        color: $highlight;
+        text-align: center;
+        background-color: transparent;
+        border-radius: 5px;
+        border-color: $highlight;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.15em;
+        cursor: pointer;
+        width: 90px;
+        margin-top: 20px;
+      }
+      input, textarea {
+        background-color: white;
+        font-size: 1.5rem !important;
+        width: 96%;
+        font-style: italic;
+        padding: 0 2%;
+        height: 40px;
+        line-height: 40px;
+        font-size: 1em;
+        border: 0;
+        border-radius: 5px;
+        resize: none;
+        margin: 15px 0;
+      }
+      textarea {
+        height: auto;
+      }
+    }
+    .social-links {
+      display: flex;
+      margin-top: 30px;
+      a {
+        color: white;
+        margin: 10px;
+        &:hover {
+              color: $highlight;
+            }
+      }
+    }
+}
