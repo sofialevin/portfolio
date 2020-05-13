@@ -18,34 +18,36 @@ function App() {
       <header>
         <Nav scrollToContact={scrollToContact} scrollToProjects={scrollToProjects} scrollToAbout={scrollToAbout}/>
       </header>
-      <section className="header">
-          <h1>Sofia Levin</h1>
-          <h2>Full Stack Web Developer</h2>
-        <a onClick={() => {
-              scrollToProjects.current.scrollIntoView({ behavior: 'smooth' });
-              }}><span></span>
-        </a>
-      </section>
-      <section ref={scrollToAbout} className="about-section">
-        <About />
-        <a onClick={() => {
-              scrollToProjects.current.scrollIntoView({ behavior: 'smooth' });
-              }}><span></span></a>
-      </section>
-      <section ref={scrollToProjects} className="projects-section">
-        <Projects />
-      </section>
-      <section ref={scrollToContact} id="contact" className="contact-section">
-         <a href="https://github.com/sofialevin">
-          <FontAwesomeIcon icon={faGithub} />
-        </a>
-        <a href="https://www.linkedin.com/in/sofiaflevin/">
-          <FontAwesomeIcon icon={faLinkedin} />
-        </a>
-        <a href="https://twitter.com/sofiaflevin">
-          <FontAwesomeIcon icon={faTwitter} />
-        </a>
-      </section>
+        <div className="main">
+        <section className="header">
+            <h1>Sofia Levin</h1>
+            <h2>Full Stack Web Developer</h2>
+          <a onClick={() => {
+                scrollToAbout.current.scrollIntoView({ behavior: 'smooth' });
+                }}><span></span>
+          </a>
+        </section>
+        <section ref={scrollToAbout} className="about-section">
+          <About />
+          <a onClick={() => {
+                scrollToProjects.current.scrollIntoView({ behavior: 'smooth' });
+                }}><span></span></a>
+        </section>
+        <section ref={scrollToProjects} className="projects-section">
+          <Projects />
+        </section>
+        <section ref={scrollToContact} id="contact" className="contact-section">
+          <a href="https://github.com/sofialevin">
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+          <a href="https://www.linkedin.com/in/sofiaflevin/">
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+          <a href="https://twitter.com/sofiaflevin">
+            <FontAwesomeIcon icon={faTwitter} />
+          </a>
+        </section>
+      </div>
       <footer className="links">
        
       </footer>
