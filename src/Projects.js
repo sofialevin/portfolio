@@ -12,7 +12,7 @@ const Projects = () => {
       name: "Alpaca Vids",
       in_progress: false,
       internal: false,
-      description: ["Collaborated in a team of 6 over the course of 2 months to plan and build a React and Node.js video recording app using the MediaDevices web API.", "The application allows students to record themselves answering interview questions in order to get practice before they start interviewing for jobs."],
+      description: ["Collaborated with a team of 6 over the course of 2 months to plan and build a React and Node.js video recording app; app uses the MediaDevices web API.", "The application allows students to record themselves answering interview questions in order to get practice before they start interviewing for jobs."],
       tech: ["react", "redux", "nodejs", "express", 
       "postgresql", "awsS3"],
       img: AlpacaGif,
@@ -33,7 +33,7 @@ const Projects = () => {
       name: "Stripe Refund App for Zendesk",
       in_progress: false,
       internal: true,
-      description: ["Zendesk sidebar app to allow the One Medical support team to issue membership refunds without leaving the support ticket.", "Build during the One Medical hack week as an initiative to improve the workflow of the support team."],
+      description: ["Zendesk sidebar app to allow the One Medical support team to issue membership refunds without leaving the support ticket.", "Built during the One Medical hack week as an initiative to improve the workflow of the support team."],
       tech: ["react", "bootstrap", "stripeAPI"],
       img: "https://p198.p4.n0.cdn.getcloudapp.com/items/geuWBW4g/ezgif.com-video-to-gif%20(1).gif?v=01c63115e04adca1cf6cc88b55d3045c"
     },
