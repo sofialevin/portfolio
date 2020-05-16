@@ -4,7 +4,7 @@ import Sofia from './IMG_0399.JPG';
 const About = () => {
   return (
     <>
-      <h3>About Me</h3>
+      <h3>About&nbsp;Me</h3>
         <div className="about-content">
           <div className="about-text">
             <p>Hi! I'm Sofia, I'm a web developer living in Oakland, CA.</p>

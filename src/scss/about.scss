@@ -8,6 +8,7 @@
       margin: 10px 0px 40px;
       display: flex;
       align-items: center;
+      width: 100%;
       &:before {
         content: "#";
         color: $highlight;
@@ -17,7 +18,7 @@
         content: "";
         display: block;
         height: 1px;
-        width: 410px;
+        width: 100%;
         background-color: rgb(48, 60, 85);
         position: relative;
         margin-left: 20px;
@@ -27,12 +28,22 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    @media (max-width: 48em) {
+      flex-direction: column;
+    }
     .about-text {
       width: 60%;
       max-width: 600px;
+      @media (max-width: 48em) {
+      width: 100%;
+    }
     }
     .about-image {
       width: 40%;
+      @media (max-width: 48em) {
+        width: 100%;
+        justify-content: center;
+    }
       img {
         max-height: 300px;
         border-radius: 50%;

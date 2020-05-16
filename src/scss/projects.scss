@@ -4,6 +4,7 @@
       margin: 40px 0px 40px;
       display: flex;
       align-items: center;
+      width: 100%;
       &:before {
         content: "#";
         color: $highlight;
@@ -13,7 +14,7 @@
         content: "";
         display: block;
         height: 1px;
-        width: 870px;
+        width: 100%;
         background-color: rgb(48, 60, 85);
         position: relative;
         margin-left: 20px;
@@ -22,10 +23,19 @@
     .project-container {
       display: flex;
       margin-bottom: 80px;
+      @media (max-width: 48em) {
+      flex-direction: column;
+    }
       .project-content {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        .tech-stack {
+          @media (max-width: 48em) {
+            display: flex;
+            flex-wrap: wrap;
+    }
+        }
         span {
           font-size: 1.8rem;
           color: $highlight;
