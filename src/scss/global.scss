@@ -71,12 +71,20 @@ a:hover {
 }
 
 section {
-  min-height: 100vh;
   padding: 0 40px;
-  // min-height: -webkit-fill-available;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   width: 100%;
   box-sizing: border-box;
 }
+
+section:not(:first-of-type) 
+  {
+    padding-top: 100px;
+    @media (max-width: 48em) {
+      padding-top: 20px;
+    }
+  }
 
 .header {
   display: flex;
