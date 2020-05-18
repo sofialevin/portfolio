@@ -8,6 +8,7 @@
       margin: 40px 0px 40px;
       display: flex;
       align-items: center;
+      width: 100%;
       &:before {
         content: "#";
         color: $highlight;
@@ -17,7 +18,7 @@
         content: "";
         display: block;
         height: 1px;
-        width: 870px;
+        width: 100%;
         background-color: rgb(48, 60, 85);
         position: relative;
         margin-left: 20px;
