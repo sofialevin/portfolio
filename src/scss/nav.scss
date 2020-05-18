@@ -16,6 +16,9 @@ nav {
   align-items: center;
   font-size: 2rem;
   padding: 0 50px;
+  @media (max-width: 48em) {
+    justify-content: space-around;
+  }
   ul {
   display: flex;
   justify-content: flex-end;
