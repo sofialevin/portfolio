@@ -18,8 +18,10 @@ function App() {
       </header>
         <div className="main">
         <section className="header">
-            <h1>Sofia Levin</h1>
-            <h2>Full Stack Web Developer</h2>
+          <div className="headline">
+            <h1>Sofia&nbsp;Levin</h1>
+            <h2>Full&nbsp;Stack&nbsp;Web&nbsp;Developer</h2>
+          </div>
           <a onClick={() => {
                 scrollToAbout.current.scrollIntoView({ behavior: 'smooth' });
                 }}><span></span>

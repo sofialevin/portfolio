@@ -16,6 +16,11 @@ nav {
   align-items: center;
   font-size: 2rem;
   padding: 0 50px;
+  transition: top 0.2s ease-in-out;
+  @media (max-width: 48em) {
+    justify-content: space-around;
+    height: 70px;
+  }
   ul {
   display: flex;
   justify-content: flex-end;
@@ -28,4 +33,8 @@ nav {
       }
     }
   }   
+}
+
+.navbar--hidden {
+  top: -100px;
 }
