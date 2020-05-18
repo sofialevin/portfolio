@@ -50,10 +50,14 @@
         width: 100%;
         justify-content: center;
         order: 1;
+        margin: 20px;
     }
       img {
-        max-height: 300px;
+        max-width: 300px;
         border-radius: 50%;
+        @media (max-width: 48em) {
+        max-width: 200px;
+    }
       }
     }
   }

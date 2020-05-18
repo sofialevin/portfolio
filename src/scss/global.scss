@@ -60,10 +60,6 @@ h4 {
   color: $light-blue;
 }
 
-section {
-  padding: 0 40px;
-}
-
 .main {
   width: 100%;
   max-width: 1100px;
@@ -76,7 +72,8 @@ a:hover {
 
 section {
   min-height: 100vh;
-  min-height: -webkit-fill-available;
+  padding: 0 40px;
+  // min-height: -webkit-fill-available;
   width: 100%;
   box-sizing: border-box;
 }
