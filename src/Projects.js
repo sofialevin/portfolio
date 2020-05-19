@@ -47,8 +47,8 @@ const Projects = () => {
     </h3>
       {
         projects.map(project => <div className="project-container">
-        <div className="project-content">
-          <h4>{project.name}</h4>
+        <h4>{project.name}</h4>
+        <div className="project-description">
           {
             project.description.map(line => <p>{line}</p>)
           }
@@ -56,6 +56,10 @@ const Projects = () => {
         {
           project.tech.map(item => <span>#{item}</span>)
         }
+        </div>
+        </div>
+        <div className="project-image">
+          <img src={project.img} />
         </div>
         <div className="project-links">
           {
@@ -69,8 +73,6 @@ const Projects = () => {
         </a> : null
           }
           </div>
-        </div>
-        <img src={project.img} />
         </div>)
       }
     </>
