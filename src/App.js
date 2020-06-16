@@ -1,4 +1,4 @@
-import React, {createRef} from 'react';
+import React, { useState, useEffect, createRef } from 'react';
 import './App.scss';
 
 import Nav from './Nav';
@@ -7,9 +7,53 @@ import Projects from './Projects';
 import Contact from './Contact';
 
 function App() {
+  const [visible, setVisible] = useState(true)
+
   const scrollToContact = createRef();
   const scrollToProjects = createRef();
   const scrollToAbout = createRef();
+
+  const handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+    console.log(currentScrollPos)
+    console.log(visible)
+
+    if (currentScrollPos > 5) {
+      setVisible(false)
+    } else {
+      setVisible(true)
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
+
+// const handleScroll = () => {
+
+//     const currentScrollPos = window.pageYOffset;
+//     const delta = 5;
+//     const isVisible = prevScrollpos > currentScrollPos;
+
+//     if(Math.abs(prevScrollpos - currentScrollPos) <= delta)
+//         return;
+
+//     setPrevScrollpos(currentScrollPos)
+//     if (currentScrollPos < 70) {
+//       setVisible(true)
+//     } else {
+//       setVisible(isVisible)
+
+//       console.log(prevScrollpos)
+//       console.log(currentScrollPos)
+//     }
+//   };
+
+
+
 
   return (
     <div className="App">
@@ -22,16 +66,14 @@ function App() {
             <h1>Sofia&nbsp;Levin</h1>
             <h2>Full&nbsp;Stack&nbsp;Web&nbsp;Developer</h2>
           </div>
-          <a onClick={() => {
-                scrollToAbout.current.scrollIntoView({ behavior: 'smooth' });
-                }}><span></span>
-          </a>
+          {
+            visible ? <a onClick={() => {
+                scrollToProjects.current.scrollIntoView({ behavior: 'smooth' });
+                }}><span></span></a> : null
+          }
         </section>
         <section ref={scrollToAbout} className="about-section">
           <About />
-          <a onClick={() => {
-                scrollToProjects.current.scrollIntoView({ behavior: 'smooth' });
-                }}><span></span></a>
         </section>
         <section ref={scrollToProjects} className="projects-section">
           <Projects />

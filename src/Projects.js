@@ -9,14 +9,14 @@ import { faExternalLinkAlt
 const Projects = () => {
   const projects = [
     {
-      name: "Alpaca Vids",
+      name: "VideoBooth.io",
       in_progress: false,
       internal: false,
       description: ["Collaborated with a team of 6 over the course of 2 months to plan and build a React and Node.js video recording app; app uses the MediaDevices web API.", "The application allows students to record themselves answering interview questions in order to get practice before they start interviewing for jobs."],
       tech: ["react", "redux", "nodejs", "express", "postgresql", "awsS3"],
       img: AlpacaGif,
-      github: "https://github.com/Lambda-School-Labs/video-journal-for-teams-fe",
-      site: "https://www.alpacavids.com"
+      github: "https://github.com/VideoBooth-io/videobooth-fe",
+      site: "https://www.videobooth.io"
 
     },
     {
