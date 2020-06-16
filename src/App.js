@@ -15,8 +15,6 @@ function App() {
 
   const handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
-    console.log(currentScrollPos)
-    console.log(visible)
 
     if (currentScrollPos > 5) {
       setVisible(false)
