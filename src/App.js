@@ -66,7 +66,7 @@ function App() {
           </div>
           {
             visible ? <a onClick={() => {
-                scrollToProjects.current.scrollIntoView({ behavior: 'smooth' });
+              scrollToAbout.current.scrollIntoView({ behavior: 'smooth' });
                 }}><span></span></a> : null
           }
         </section>
