@@ -1,6 +1,7 @@
 import React from 'react';
 
 import AlpacaGif from './alpaca-vids.gif';
+import CoronaGif from './coronasweeper.gif';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faExternalLinkAlt
@@ -8,6 +9,16 @@ import { faExternalLinkAlt
 
 const Projects = () => {
   const projects = [
+    {
+      name: "Coronasweeper",
+      in_progress: false,
+      internal: false,
+      description: ["Coronasweeper is a coronavirus themed minesweeeper game I designed and built as a different kind of challenge. It uses react and styled-components for styling and it's fully responsive."],
+      tech: ["react", "styled-components"],
+      img: CoronaGif,
+      site: "https://www.coronasweeper.com"
+
+    },
     {
       name: "VideoBooth.io (previously Alpaca Vids)",
       in_progress: false,
@@ -57,10 +68,6 @@ const Projects = () => {
           project.tech.map(item => <span>#{item}</span>)
         }
         </div>
-        </div>
-        <div className="project-image">
-          <img src={project.img} />
-        </div>
         <div className="project-links">
           {
             project.github ? <a href={project.github}>
@@ -73,6 +80,10 @@ const Projects = () => {
         </a> : null
           }
           </div>
+        </div>
+        <div className="project-image">
+          <img src={project.img} />
+        </div>
         </div>)
       }
     </>

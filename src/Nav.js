@@ -18,9 +18,6 @@ const Nav = (props) => {
       setVisible(true)
     } else {
       setVisible(isVisible)
-
-      console.log(prevScrollpos)
-      console.log(currentScrollPos)
     }
   };
 
