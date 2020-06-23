@@ -83,16 +83,16 @@ const Nav = (props) => {
     <nav className={visible ? null : "navbar--hidden"}>
       <ul>
         <li>
-          <a onClick={() => {
+          <a href="#about" onClick={() => {
               props.scrollToAbout.current.scrollIntoView({ behavior: 'smooth' });
               }}>ABOUT</a>
         </li>
         <li>
-          <a onClick={() => {
+          <a  href="#projects" onClick={() => {
                 props.scrollToProjects.current.scrollIntoView({ behavior: 'smooth' });}}>PROJECTS</a>
         </li>
         <li>
-          <a onClick={() => {
+          <a  href="#contact" onClick={() => {
                 props.scrollToContact.current.scrollIntoView({ behavior: 'smooth' });
               }}>CONTACT</a>
         </li>

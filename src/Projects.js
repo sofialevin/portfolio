@@ -10,6 +10,7 @@ import { faExternalLinkAlt
 const Projects = () => {
   const projects = [
     {
+      id: 4,
       name: "Coronasweeper",
       in_progress: false,
       internal: false,
@@ -20,6 +21,7 @@ const Projects = () => {
 
     },
     {
+      id: 3,
       name: "VideoBooth.io (previously Alpaca Vids)",
       in_progress: false,
       internal: false,
@@ -31,6 +33,7 @@ const Projects = () => {
 
     },
     {
+      id: 2,
       name: "KnitHub",
       in_progress: true,
       internal: false,
@@ -40,6 +43,7 @@ const Projects = () => {
       img: "https://p198.p4.n0.cdn.getcloudapp.com/items/Z4uLp5l4/Screen%20Recording%202020-05-12%20at%2008.01%20PM.gif?v=9df0f357e6a721b4fa1e252c3eda02de"
     },
     {
+      id: 1,
       name: "Stripe Refund App for Zendesk",
       in_progress: false,
       internal: true,
@@ -57,15 +61,15 @@ const Projects = () => {
       Projects
     </h3>
       {
-        projects.map(project => <div className="project-container">
+        projects.map(project => <div className="project-container" key={project.id}>
         <h4>{project.name}</h4>
         <div className="project-description">
           {
-            project.description.map(line => <p>{line}</p>)
+            project.description.map((line, index) => <p key={`${project.id}_line_${index + 1}`}>{line}</p>)
           }
           <div className="tech-stack">
         {
-          project.tech.map(item => <span>#{item}</span>)
+          project.tech.map(item => <span key={`${project.id}_${item}`}>#{item}</span>)
         }
         </div>
         <div className="project-links">
@@ -82,7 +86,7 @@ const Projects = () => {
           </div>
         </div>
         <div className="project-image">
-          <img src={project.img} />
+          <img alt={`${project.name}`} src={project.img} />
         </div>
         </div>)
       }

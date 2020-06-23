@@ -65,15 +65,15 @@ function App() {
             <h2>Full&nbsp;Stack&nbsp;Web&nbsp;Developer</h2>
           </div>
           {
-            visible ? <a onClick={() => {
+            visible ? <a href="#about" onClick={() => {
               scrollToAbout.current.scrollIntoView({ behavior: 'smooth' });
                 }}><span></span></a> : null
           }
         </section>
-        <section ref={scrollToAbout} className="about-section">
+        <section ref={scrollToAbout} className="about-section" id="about">
           <About />
         </section>
-        <section ref={scrollToProjects} className="projects-section">
+        <section ref={scrollToProjects} className="projects-section" id="projects">
           <Projects />
         </section>
         <section ref={scrollToContact} id="contact" className="contact-section">
