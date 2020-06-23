@@ -85,16 +85,16 @@ const Nav = (props) => {
         <li>
           <a href="#about" onClick={() => {
               props.scrollToAbout.current.scrollIntoView({ behavior: 'smooth' });
-              }}>ABOUT</a>
+              }}>About</a>
         </li>
         <li>
           <a  href="#projects" onClick={() => {
-                props.scrollToProjects.current.scrollIntoView({ behavior: 'smooth' });}}>PROJECTS</a>
+                props.scrollToProjects.current.scrollIntoView({ behavior: 'smooth' });}}>Projects</a>
         </li>
         <li>
           <a  href="#contact" onClick={() => {
                 props.scrollToContact.current.scrollIntoView({ behavior: 'smooth' });
-              }}>CONTACT</a>
+              }}>Contact</a>
         </li>
       </ul>
     </nav>
