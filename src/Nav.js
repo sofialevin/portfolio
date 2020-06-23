@@ -1,33 +1,31 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 const Nav = (props) => {
-  const [ prevScrollpos, setPrevScrollpos ] = useState(window.pageYOffset);
-  const [ visible, setVisible ] = useState(true);
+  const [prevScrollpos, setPrevScrollpos] = useState(window.pageYOffset);
+  const [visible, setVisible] = useState(true);
 
   const handleScroll = () => {
-
     const currentScrollPos = window.pageYOffset;
     const delta = 5;
     const isVisible = prevScrollpos > currentScrollPos;
 
-    if(Math.abs(prevScrollpos - currentScrollPos) <= delta)
-        return;
+    if (Math.abs(prevScrollpos - currentScrollPos) <= delta) { return; }
 
-    setPrevScrollpos(currentScrollPos)
+    setPrevScrollpos(currentScrollPos);
     if (currentScrollPos < 70) {
-      setVisible(true)
+      setVisible(true);
     } else {
-      setVisible(isVisible)
+      setVisible(isVisible);
     }
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   });
-
 
   // let prevScrollpos = window.pageYOffset;
   // window.onscroll = function() {
@@ -50,55 +48,85 @@ const Nav = (props) => {
   //   console.log("true")
   // })
 
-//   setInterval(function() {
-//       if (didScroll) {
-//           hasScrolled();
-//           didScroll = false;
-//       }
-//   }, 250);
+  //   setInterval(function() {
+  //       if (didScroll) {
+  //           hasScrolled();
+  //           didScroll = false;
+  //       }
+  //   }, 250);
 
-//   function hasScrolled() {
-//       var st = $(this).scrollTop();
-    
-//     // Make sure they scroll more than delta
-//     if(Math.abs(lastScrollTop - st) <= delta)
-//         return;
-    
-//     // If they scrolled down and are past the navbar, add class .nav-up.
-//     // This is necessary so you never see what is "behind" the navbar.
-//     if (st > lastScrollTop && st > navbarHeight){
-//         // Scroll Down
-//         $('header').removeClass('nav-down').addClass('nav-up');
-//     } else {
-//         // Scroll Up
-//         if(st + $(window).height() < $(document).height()) {
-//             $('header').removeClass('nav-up').addClass('nav-down');
-//         }
-//     }
-    
-//     lastScrollTop = st;
+  //   function hasScrolled() {
+  //       var st = $(this).scrollTop();
 
+  //     // Make sure they scroll more than delta
+  //     if(Math.abs(lastScrollTop - st) <= delta)
+  //         return;
+
+  //     // If they scrolled down and are past the navbar, add class .nav-up.
+  //     // This is necessary so you never see what is "behind" the navbar.
+  //     if (st > lastScrollTop && st > navbarHeight){
+  //         // Scroll Down
+  //         $('header').removeClass('nav-down').addClass('nav-up');
+  //     } else {
+  //         // Scroll Up
+  //         if(st + $(window).height() < $(document).height()) {
+  //             $('header').removeClass('nav-up').addClass('nav-down');
+  //         }
+  //     }
+
+  //     lastScrollTop = st;
 
   return (
-    <nav className={visible ? null : "navbar--hidden"}>
+    <nav className={visible ? null : 'navbar--hidden'}>
       <ul>
         <li>
-          <a href="#about" onClick={() => {
+          <a
+            href="#about"
+            onClick={() => {
               props.scrollToAbout.current.scrollIntoView({ behavior: 'smooth' });
-              }}>About</a>
+            }}
+          >
+            About
+          </a>
         </li>
         <li>
-          <a  href="#projects" onClick={() => {
-                props.scrollToProjects.current.scrollIntoView({ behavior: 'smooth' });}}>Projects</a>
+          <a
+            href="#projects"
+            onClick={() => {
+              props.scrollToProjects.current.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
+            Projects
+          </a>
         </li>
         <li>
-          <a  href="#contact" onClick={() => {
-                props.scrollToContact.current.scrollIntoView({ behavior: 'smooth' });
-              }}>Contact</a>
+          <a
+            href="#contact"
+            onClick={() => {
+              props.scrollToContact.current.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
+            Contact
+          </a>
         </li>
       </ul>
     </nav>
   );
-}
- 
+};
+
+Nav.propTypes = {
+  scrollToProjects: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]).isRequired,
+  scrollToContact: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]).isRequired,
+  scrollToAbout: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]).isRequired,
+};
+
 export default Nav;
