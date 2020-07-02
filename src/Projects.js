@@ -2,8 +2,9 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-import CoronaGif from './coronasweeper.gif';
-import AlpacaGif from './alpaca-vids.gif';
+import CoronaGif from './gifs/coronasweeper.gif';
+import AlpacaGif from './gifs/alpaca-vids.gif';
+import KnitHub from './gifs/knithub.gif';
 
 const Projects = () => {
   const projects = [
@@ -36,7 +37,7 @@ const Projects = () => {
       internal: false,
       description: ['Web app to find knitting tutorials for various techniques, with options to filter by source, type of tutorial (video or picture), type of technique, and more.'],
       tech: ['react', 'redux', 'nodejs', 'express', 'postgresql'],
-      img: 'https://p198.p4.n0.cdn.getcloudapp.com/items/Z4uLp5l4/Screen%20Recording%202020-05-12%20at%2008.01%20PM.gif?v=9df0f357e6a721b4fa1e252c3eda02de',
+      img: KnitHub,
     },
     {
       id: 1,
