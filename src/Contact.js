@@ -18,7 +18,7 @@ const Contact = () => (
       <label htmlFor="email" />
       <input type="email" placeholder="Email" name="email" id="email" aria-label="Email"/>
       <label htmlFor="message" />
-      <textarea name="message" placeholder="Message" id="message" aria-label="Message"/>
+      <textarea name="message" placeholder="Message" rows="4" id="message" aria-label="Message"/>
       <button type="submit">Send</button>
     </form>
     <div className="social-links">
