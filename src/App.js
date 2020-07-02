@@ -68,6 +68,7 @@ function App() {
             visible ? (
               <a
                 href="#about"
+                aria-label="About"
                 onClick={() => {
                   scrollToAbout.current.scrollIntoView({ behavior: 'smooth' });
                 }}

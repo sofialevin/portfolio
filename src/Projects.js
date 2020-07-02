@@ -16,13 +16,14 @@ const Projects = () => {
       tech: ['react', 'styled-components'],
       img: CoronaGif,
       site: 'https://www.coronasweeper.com',
+      
     },
     {
       id: 3,
-      name: 'VideoBooth.io (previously Alpaca Vids)',
+      name: 'VideoBooth.io',
       in_progress: false,
       internal: false,
-      description: ['Collaborated with a team of 6 over the course of 2 months to plan and build a React and Node.js video recording app; app uses the MediaDevices web API.', 'The application allows students to record themselves answering interview questions in order to get practice before they start interviewing for jobs.'],
+      description: ['Previously Alpaca Vids. Collaborated with a team of 6 over the course of 2 months to plan and build a React and Node.js video recording app; app uses the MediaDevices web API.', 'The application allows students to record themselves answering interview questions in order to get practice before they start interviewing for jobs.'],
       tech: ['react', 'redux', 'nodejs', 'express', 'postgresql', 'awsS3'],
       img: AlpacaGif,
       github: 'https://github.com/VideoBooth-io/videobooth-fe',
@@ -74,14 +75,14 @@ const Projects = () => {
               <div className="project-links">
                 {
             project.github ? (
-              <a href={project.github}>
+              <a href={project.github} aria-label={`${project.name} Github`}>
                 <FontAwesomeIcon icon={faGithub} />
               </a>
             ) : null
                 }
                 {
             project.site ? (
-              <a href={project.site}>
+              <a href={project.site} aria-label={`${project.name} Site`}>
                 <FontAwesomeIcon icon={faExternalLinkAlt} />
               </a>
             ) : null
