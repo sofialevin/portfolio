@@ -24,7 +24,7 @@ const About = () => (
           <a href="https://www.onemedical.com" target="_blank" rel="noopener noreferrer" aria-label="One Medical">One Medical</a>
           .
         </p>
-        <p>When I&apos;m not coding, I still mostly try to build and make things. My current favorites are knitting and baking, but I&apos;m always open to new projects... if you send me an idea and some tools I will make something awesome!</p>
+        <p>When I&apos;m not coding, I still mostly try to build and make things. My current favorites are knitting and baking, but I&apos;m always open to new projects...</p>
       </div>
       <div className="about-image">
         <img src={Sofia} alt="Sofia Levin" />
