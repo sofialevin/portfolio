@@ -24,7 +24,7 @@ const Projects = () => {
       name: 'Harry Young Cochran',
       in_progress: false,
       internal: false,
-      description: ["Built campaign website for Harry Young Cochran, who's running for State Representative for Pennsylvania’s 52nd disctrict."],
+      description: ["Built campaign website for Harry Young Cochran, who's running for State Representative for Pennsylvania’s 52nd district."],
       tech: ['wordpress', 'css'],
       img: Harry,
       site: 'https://harryyoungcochran.com',
