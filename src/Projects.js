@@ -2,14 +2,15 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-import CoronaGif from './gifs/coronasweeper.gif';
-import AlpacaGif from './gifs/alpaca-vids.gif';
-import KnitHub from './gifs/knithub.gif';
+import CoronaGif from './assets/coronasweeper.gif';
+import AlpacaGif from './assets/alpaca-vids.gif';
+import KnitHub from './assets/knithub.gif';
+import Harry from './assets/harry.png';
 
 const Projects = () => {
   const projects = [
     {
-      id: 4,
+      id: 5,
       name: 'Coronasweeper',
       in_progress: false,
       internal: false,
@@ -17,7 +18,16 @@ const Projects = () => {
       tech: ['react', 'styled-components'],
       img: CoronaGif,
       site: 'https://www.coronasweeper.com',
-      
+    },
+    {
+      id: 4,
+      name: 'Harry Young Cochran',
+      in_progress: false,
+      internal: false,
+      description: ["Built campaign website for Harry Young Cochran, who's running for State Representative for Pennsylvania’s 52nd disctrict."],
+      tech: ['wordpress', 'css'],
+      img: Harry,
+      site: 'https://harryyoungcochran.com',
     },
     {
       id: 3,
