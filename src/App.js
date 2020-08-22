@@ -29,26 +29,6 @@ function App() {
     };
   });
 
-  // const handleScroll = () => {
-
-  //     const currentScrollPos = window.pageYOffset;
-  //     const delta = 5;
-  //     const isVisible = prevScrollpos > currentScrollPos;
-
-  //     if(Math.abs(prevScrollpos - currentScrollPos) <= delta)
-  //         return;
-
-  //     setPrevScrollpos(currentScrollPos)
-  //     if (currentScrollPos < 70) {
-  //       setVisible(true)
-  //     } else {
-  //       setVisible(isVisible)
-
-  //       console.log(prevScrollpos)
-  //       console.log(currentScrollPos)
-  //     }
-  //   };
-
   return (
     <div className="App">
       <header>

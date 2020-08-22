@@ -14,11 +14,11 @@ const Contact = () => (
     <form name="contact" method="POST">
       <input type="hidden" name="form-name" id="form-name" value="contact" />
       <label htmlFor="name" />
-      <input type="text" placeholder="Name" name="name" id="name" aria-label="Name"/>
+      <input type="text" placeholder="Name" name="name" id="name" aria-label="Name" />
       <label htmlFor="email" />
-      <input type="email" placeholder="Email" name="email" id="email" aria-label="Email"/>
+      <input type="email" placeholder="Email" name="email" id="email" aria-label="Email" />
       <label htmlFor="message" />
-      <textarea name="message" placeholder="Message" rows="4" id="message" aria-label="Message"/>
+      <textarea name="message" placeholder="Message" rows="4" id="message" aria-label="Message" />
       <button type="submit">Send</button>
     </form>
     <div className="social-links">
