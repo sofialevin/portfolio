@@ -48,6 +48,7 @@ const Projects = () => {
       description: ['Web app to find knitting tutorials for various techniques, with options to filter by source, type of tutorial (video or picture), type of technique, and more.'],
       tech: ['react', 'redux', 'nodejs', 'express', 'postgresql'],
       img: KnitHub,
+      github: 'https://github.com/sofialevin/knithub',
     },
     {
       id: 1,
